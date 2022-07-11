@@ -99,7 +99,7 @@ public class SurveyService {
 		question.setId(randomId.intValue());
 
 		survey.getQuestions().add(question);
-
+		System.out.println(question);
 		return question;
 	}
 }
