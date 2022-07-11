@@ -56,7 +56,7 @@ public class SurveyController {
     }
     
     @GetMapping("/surveys/{surveyId}/questions/{questionId}")
-    @PreAuthorize("hasAuthority('Admin')")
+    @PreAuthorize("hasAnyAuthority('Admin', 'User')")
 	public Question retriveQuestion(@PathVariable int surveyId,@PathVariable int questionId ){
 		
 		return surveyService.retrieveQuestion(surveyId,questionId);

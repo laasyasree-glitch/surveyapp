@@ -51,7 +51,6 @@ public class WelcomeController {
 		}
 		
 		@PostMapping("/authenticate")
-		//@RolesAllowed({"User","Admin"})
 	    public JWTResponse authenticate(@RequestBody JWTRequest jwtRequest) throws Exception{
 
 	        try {
