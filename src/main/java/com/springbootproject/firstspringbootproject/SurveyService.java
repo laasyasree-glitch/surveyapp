@@ -95,10 +95,11 @@ public class SurveyService {
 			return null;
 		}
 
-		BigInteger randomId = new BigInteger(130, random);
-		question.setId(randomId.intValue());
+		//BigInteger randomId = new BigInteger(130, random);
+		//question.setId(randomId.intValue());
 
 		survey.getQuestions().add(question);
+		surveyRepository.save(survey);
 		System.out.println(question);
 		return question;
 	}
