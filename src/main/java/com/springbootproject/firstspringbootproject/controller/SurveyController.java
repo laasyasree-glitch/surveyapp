@@ -1,10 +1,7 @@
-package com.springbootproject.firstspringbootproject;
+package com.springbootproject.firstspringbootproject.controller;
 
 import java.net.URI;
 import java.util.List;
-
-import javax.annotation.security.RolesAllowed;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.access.prepost.PreAuthorize;
@@ -15,10 +12,8 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
-
-import com.springboot.web.springbootfirstwebapplication.controller.TodoRepository;
-import com.springbootproject.firstspringbootproject.jpa.SurveyRepository;
-import com.springbootproject.firstspringbootproject.jpa.UserRepository;
+import com.springbootproject.firstspringbootproject.DriverClasses.Question;
+import com.springbootproject.firstspringbootproject.repository.SurveyRepository;import com.springbootproject.firstspringbootproject.service.SurveyService;
 
 @RestController //No need to use @ResponseBody
 public class SurveyController {

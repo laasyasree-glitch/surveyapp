@@ -1,4 +1,4 @@
-package com.springbootproject.firstspringbootproject;
+package com.springbootproject.firstspringbootproject.service;
 
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;

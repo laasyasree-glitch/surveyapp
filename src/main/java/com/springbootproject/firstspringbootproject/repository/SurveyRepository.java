@@ -1,9 +1,9 @@
-package com.springbootproject.firstspringbootproject.jpa;
+package com.springbootproject.firstspringbootproject.repository;
 
-import java.util.List;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;
-import com.springbootproject.firstspringbootproject.Survey;
+
+import com.springbootproject.firstspringbootproject.DriverClasses.Survey;
 
 @Repository
 public interface SurveyRepository extends CrudRepository<Survey,Integer>{

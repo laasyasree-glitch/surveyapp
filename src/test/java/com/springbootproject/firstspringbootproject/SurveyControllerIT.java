@@ -23,6 +23,8 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.security.crypto.codec.Base64;
 import org.springframework.test.context.junit.jupiter.SpringExtension;
 
+import com.springbootproject.firstspringbootproject.DriverClasses.Question;
+
 @ExtendWith(SpringExtension.class)
 @SpringBootTest(classes = Application.class,webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
 public class SurveyControllerIT {

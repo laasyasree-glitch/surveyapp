@@ -1,12 +1,6 @@
-package com.springbootproject.firstspringbootproject;
-
-import java.util.HashMap;
-import java.util.Map;
-
-import javax.annotation.security.RolesAllowed;
+package com.springbootproject.firstspringbootproject.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.ResponseEntity;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.BadCredentialsException;
@@ -16,12 +10,10 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
-
-import com.springbootproject.firstspringbootproject.configuration.BasicConfiguration;
-import com.springbootproject.firstspringbootproject.jpa.UserRepository;
 import com.springbootproject.firstspringbootproject.model.JWTRequest;
 import com.springbootproject.firstspringbootproject.model.JWTResponse;
 import com.springbootproject.firstspringbootproject.service.UserService;
+import com.springbootproject.firstspringbootproject.service.WelcomeService;
 import com.springbootproject.firstspringbootproject.utility.JWTUtility;
 
 @RestController
@@ -40,9 +32,6 @@ public class WelcomeController {
 
 	    @Autowired
 	    private UserService userService;
-	
-	@Autowired
-	private BasicConfiguration configuration;
 	
 		@RequestMapping("/welcome")
 		@PreAuthorize("hasAuthority('User')")

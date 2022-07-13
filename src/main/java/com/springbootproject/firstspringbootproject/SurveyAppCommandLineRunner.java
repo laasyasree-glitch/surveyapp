@@ -4,10 +4,12 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
 
-import com.springbootproject.firstspringbootproject.jpa.QuestionsRepository;
-import com.springbootproject.firstspringbootproject.jpa.SurveyRepository;
-import com.springbootproject.firstspringbootproject.jpa.User;
-import com.springbootproject.firstspringbootproject.jpa.UserRepository;
+import com.springbootproject.firstspringbootproject.DriverClasses.Question;
+import com.springbootproject.firstspringbootproject.DriverClasses.Survey;
+import com.springbootproject.firstspringbootproject.DriverClasses.User;
+import com.springbootproject.firstspringbootproject.repository.QuestionsRepository;
+import com.springbootproject.firstspringbootproject.repository.SurveyRepository;
+import com.springbootproject.firstspringbootproject.repository.UserRepository;
 
 import java.util.Arrays;
 import org.slf4j.Logger;

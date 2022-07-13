@@ -1,4 +1,4 @@
-package com.springbootproject.firstspringbootproject;
+package com.springbootproject.firstspringbootproject.DriverClasses;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
