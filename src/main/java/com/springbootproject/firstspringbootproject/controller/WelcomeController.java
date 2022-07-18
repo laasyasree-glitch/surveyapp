@@ -34,7 +34,7 @@ public class WelcomeController {
 	    private UserService userService;
 	
 		@RequestMapping("/welcome")
-		@PreAuthorize("hasAuthority('User')")
+		//@PreAuthorize("hasAuthority('User')"
 		public String welcome() {
 			return service.retrieveWelcomeMessage();
 		}
