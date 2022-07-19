@@ -18,7 +18,7 @@ public class Survey {
 	private int id;
 	private String title;
 	private String description;
-	@OneToMany(fetch=FetchType.EAGER)
+	@OneToMany(fetch=FetchType.EAGER,cascade = CascadeType.ALL)
 	@JoinColumn(name="survey_id")
 	private List<Question> questions;
 
