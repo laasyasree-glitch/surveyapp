@@ -1,7 +1,6 @@
 package com.springbootproject.firstspringbootproject.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.BadCredentialsException;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
@@ -34,7 +33,6 @@ public class WelcomeController {
 	    private UserService userService;
 	
 		@RequestMapping("/welcome")
-		//@PreAuthorize("hasAuthority('User')"
 		public String welcome() {
 			return service.retrieveWelcomeMessage();
 		}
