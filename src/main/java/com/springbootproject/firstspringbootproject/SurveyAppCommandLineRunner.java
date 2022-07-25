@@ -32,13 +32,13 @@ public class SurveyAppCommandLineRunner implements CommandLineRunner {
 	@Override
 	public void run(String... args) throws Exception {
 		Question question1 = new 
-				Question(1,"Largest Country in the World", "Russia", "India", "Russia", "United States", "China");
+				Question(1,"What is the type of database that holds only one type of information: ", "Field", "Report", "File", "Field", "Record");
 		Question question2 = new 
-				Question(2,"Most Populus Country in the World", "China","India", "Russia", "United States", "China");
+				Question(2,"'.MOV' extension refers to: ", "Animation/movie file","Image file", "Animation/movie file", "Audio file", "MS Office document");
 		Question question3 = new 
 				Question(3, "Highest GDP in the World", "United States","India", "Russia", "United States", "China");
 		Question question4 = new 
-				Question(4,"Second largest english speaking country", "India","India", "Russia", "United States", "China");
+				Question(4,"The purpose of choke in tube light is: ", "To increase the voltage momentarily","To decrease the current", "To increase the current", "To decrease the voltage momentarily", "To increase the voltage momentarily");
 		
 		surveyRepository.save(new Survey(1, "laasya","On Springboot",
 				questionRepository.saveAll(Arrays.asList(question1,question2))));
