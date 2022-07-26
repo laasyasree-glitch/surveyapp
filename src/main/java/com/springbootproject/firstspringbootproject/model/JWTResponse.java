@@ -8,9 +8,11 @@ import lombok.NoArgsConstructor;
 //@AllArgsConstructor
 @NoArgsConstructor
 public class JWTResponse {
+	private String userole;
 	private String jwtToken;
-	public JWTResponse(String token) {
+	public JWTResponse(String token, String role) {
 		this.jwtToken=token;
+		this.userole=role;
 	}
 	public String getJwtToken() {
 		return jwtToken;

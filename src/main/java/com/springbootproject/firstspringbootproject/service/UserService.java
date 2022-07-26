@@ -19,7 +19,7 @@ public class UserService implements UserDetailsService{
 	@Override
 	public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
 		Optional<com.springbootproject.firstspringbootproject.DriverClasses.User> newUser= userRepository.findByUserName(username);
-		System.out.println(newUser.get());
+		//System.out.println(newUser.get());
 		if(newUser.isPresent())
 			return new User(newUser.get().getName(),newUser.get().getPassword(),
 				AuthorityUtils.commaSeparatedStringToAuthorityList(newUser.get().getRole()));
@@ -27,5 +27,8 @@ public class UserService implements UserDetailsService{
 		else
 			throw new UsernameNotFoundException("User name not found");
 	}
-	
+
+	public String getRole(String username){
+		return userRepository.findByUserName(username).get().getRole();
+	}
 }

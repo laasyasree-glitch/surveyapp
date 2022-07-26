@@ -56,8 +56,9 @@ public class WelcomeController {
 
 	        final String token =
 	                jwtUtility.generateToken(userDetails);
+			final String role = userService.getRole(jwtRequest.getUsername());
 
-	        return  new JWTResponse(token);
+	        return  new JWTResponse(token,role);
 	    }
 		
 
